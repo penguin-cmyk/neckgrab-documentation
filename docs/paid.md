@@ -1,4 +1,4 @@
-# Paid
+# Paid (this was for Solograb and is NOT for legion)
 **In general you have some variables defined (only in paid)**
 
 
