@@ -154,16 +154,6 @@ Legion:PlayAudio(id: number)
 ```lua
 Legion:PlayAudio(1234567890)
 ```
-### [docs.md](file:///c%3A/Users/sigma/Downloads/autoexec/docs.md)
-
-```markdown
-// ...existing code...
-- **`id`**: The asset ID of the audio file (number).
-
-#### Example:
-```lua
-Legion:PlayAudio(1234567890)
-```
 
 ### `Legion:StopAudio`
 
