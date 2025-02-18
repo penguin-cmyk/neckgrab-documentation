@@ -426,7 +426,7 @@ Legion:Void(grabbedChar)
 # Services 
 #### How to access services?
 ```lua
-Services.ServiceName --(e.g Service.Workspace)
+Services.ServiceName --(e.g Services.Workspace)
 ```
 
 #### What Services are in there?
