@@ -154,6 +154,91 @@ Legion:PlayAudio(id: number)
 ```lua
 Legion:PlayAudio(1234567890)
 ```
+### [docs.md](file:///c%3A/Users/sigma/Downloads/autoexec/docs.md)
+
+```markdown
+// ...existing code...
+- **`id`**: The asset ID of the audio file (number).
+
+#### Example:
+```lua
+Legion:PlayAudio(1234567890)
+```
+
+### `Legion:StopAudio`
+
+Stops the currently playing audio.
+
+```lua
+Legion:StopAudio()
+```
+
+#### Example:
+
+```lua
+Legion:StopAudio()
+```
+
+### `Legion:AddConnection`
+
+Adds a script connection to a table for later disconnection.
+
+```lua
+Legion:AddConnection(name: string, connection: RBXScriptConnection)
+```
+
+#### Parameters:
+
+*   **`name`**: The name of the connection (string).
+*   **`connection`**: The `RBXScriptConnection` object (RBXScriptConnection).
+
+#### Example:
+
+```lua
+local connection = RunService.Heartbeat:Connect(function() print("Heartbeat") end)
+Legion:AddConnection("Heartbeat", connection)
+```
+
+### `Legion:RemoveConnection`
+
+Removes and disconnects a script connection.
+
+```lua
+Legion:RemoveConnection(name: string)
+```
+
+#### Parameters:
+
+*   **`name`**: The name of the connection to remove (string).
+
+#### Example:
+
+```lua
+Legion:RemoveConnection("Heartbeat")
+```
+
+## Miscellaneous Utilities
+
+### `Legion:GetGrabbed`
+
+Returns the character currently being grabbed by the local player.
+
+```lua
+Legion:GetGrabbed() -> Instance?
+```
+
+#### Returns:
+
+*   The grabbed character model (Model) or `nil` if no character is currently grabbed.
+
+#### Example:
+
+```lua
+local grabbedChar = Legion:GetGrabbed()
+if grabbedChar then
+    print("Grabbed character:", grabbedChar.Name)
+end
+```
 
 ### `Legion:PlayAnimation`
 
