@@ -422,3 +422,22 @@ Legion:Void(character: Model, partName: string?)
 ```lua
 Legion:Void(grabbedChar)
 ```
+
+# Services 
+#### How to access services?
+```lua
+Services.ServiceName --(e.g Service.Workspace)
+```
+
+#### What Services are in there?
+- Players 
+- LocalPlayer
+- ReplicatedStorage
+- MainEvent
+- RunService
+- Workspace
+- Lighting
+- TweenService
+- HttpService
+- UserInputService
+- VirtualInputManager
