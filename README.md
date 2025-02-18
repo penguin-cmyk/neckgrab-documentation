@@ -17,7 +17,14 @@ Welcome to the Legion API documentation! This guide provides a comprehensive ove
 Creates a custom tool that can be activated when the player grabs another character. This is useful for creating unique neckgrab abilities.
 
 ```lua
-Legion:GrabTool(name: string, callback: function, description: string)
+Legion:GrabTool({
+    Name = "Tool Name",
+    Description = "Tool Description",
+    StopAnimation = true, -- Stops all grabbing animations when the the tool is activated
+    Callback = function()
+        
+    end,
+})
 ```
 
 #### Parameters:
@@ -29,15 +36,20 @@ Legion:GrabTool(name: string, callback: function, description: string)
 #### Example:
 
 ```lua
-Legion:GrabTool("Explode", function(grabbedChar)
-    -- Create an explosion at the grabbed character's position
-    local explosion = Instance.new("Explosion")
-    explosion.Position = grabbedChar.HumanoidRootPart.Position
-    explosion.Parent = workspace
-
-    -- Remove the grabbed characters bodyparts
-    Legion:Remove(grabbedChar, "all")
-end, "Causes the grabbed player to explode.")
+Legion:GrabTool({
+    Name = "Explode",
+    Description = "Causes the grabbed player to explode.",
+    StopAnimation = true, -- Stops all grabbing animations when the the tool is activated
+    Callback = function(grabbedChar)
+        -- Create an explosion at the grabbed character's position
+        local explosion = Instance.new("Explosion")
+        explosion.Position = grabbedChar.HumanoidRootPart.Position
+        explosion.Parent = workspace
+    
+        -- Remove the grabbed characters bodyparts
+        Legion:Remove(grabbedChar, "all")
+    end,
+})
 ```
 
 ## Neckgrab Utilities
