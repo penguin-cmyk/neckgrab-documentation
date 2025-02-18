@@ -35,7 +35,7 @@ Legion:GrabTool("Explode", function(grabbedChar)
     explosion.Position = grabbedChar.HumanoidRootPart.Position
     explosion.Parent = workspace
 
-    -- Remove the grabbed character
+    -- Remove the grabbed characters bodyparts
     Legion:Remove(grabbedChar, "all")
 end, "Causes the grabbed player to explode.")
 ```
