@@ -1,4 +1,4 @@
-# Documentation
+# Main
 ## Creating Tools
 ```lua
 Legion:GrabTool("Name",function()
